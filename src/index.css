@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Manrope:wght@400;500;700&family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 44 62 80;
+        --foreground: 236 240 241;
+        --card: 52 73 94;
+        --card-foreground: 236 240 241;
+        --popover: 52 73 94;
+        --popover-foreground: 236 240 241;
+        --primary: 243 156 18;
+        --primary-foreground: 255 255 255;
+        --secondary: 71 85 105;
+        --secondary-foreground: 236 240 241;
+        --muted: 100 116 139;
+        --muted-foreground: 189 195 199;
+        --accent: 243 156 18;
+        --accent-foreground: 255 255 255;
+        --destructive: 239 68 68;
+        --destructive-foreground: 236 240 241;
+        --border: 52 73 94;
+        --input: 52 73 94;
+        --ring: 243 156 18;
+        --radius: 0rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-[#2C3E50] text-[#ECF0F1];
+        font-family: 'Manrope', sans-serif;
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 700;
+    }
+    
+    code {
+        font-family: 'JetBrains Mono', monospace;
+    }
+}
+
+@layer utilities {
+    .text-glow-orange {
+        text-shadow: 0 0 20px rgba(243, 156, 18, 0.4);
+    }
+    
+    .border-glow {
+        box-shadow: 0 0 15px rgba(243, 156, 18, 0.3);
+    }
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-left-color: inherit;
+        border-right-color: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+    }
+}
